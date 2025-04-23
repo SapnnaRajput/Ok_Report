@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:o_r/auth/login_screen/login_screen.dart';
 
 import '../utils/constants/colors.dart';
 import '../utils/constants/image_strings.dart';
@@ -8,7 +9,7 @@ class SplashScreen extends StatelessWidget{
   const SplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)  {
     return Container(
       color: ORColors.primaryBackground,
       child: SafeArea(
@@ -60,7 +61,9 @@ class SplashScreen extends StatelessWidget{
                   SizedBox(
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: ORColors.primaryColor,
                           shape: RoundedRectangleBorder(

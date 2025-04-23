@@ -27,6 +27,11 @@ class ORColors{
   static const Color textSecondary = Color(0xFF6D6D6D);
   static const Color textWhite = Color(0xFFffffff);
 
+// Text input field color
+  static const Color textInputFieldColor = Color(0xFFf6f6f6);
+
+
+
   // Background Color
   static const Color light = Color(0xFFf6f6f6);
   static const Color dark = Color(0xFF272727);
@@ -55,7 +60,7 @@ class ORColors{
   static const Color black = Color(0xFF232323);
   static const Color darkerGrey = Color(0xFF4f4f4f);
   static const Color darkGrey = Color(0xFF939393);
-  static const Color grey = Color(0xFFe0e0e0);
+  static Color? grey = Colors.grey[50];
   static const Color softGrey = Color(0xFFf4f4f4);
   static const Color white = Color(0xFFffffff);
 
