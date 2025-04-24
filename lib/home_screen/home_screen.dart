@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:o_r/notification_screen/notification_screen.dart';
+import 'package:o_r/profile_screen/profile_screen.dart';
 import 'package:o_r/utils/constants/colors.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
@@ -112,9 +114,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   children: [
                     // Profile image
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundImage: AssetImage('assets/images/user.png'),
+                    GestureDetector(
+                      onTap: ()=> Get.to(()=> ProfileScreen()),
+                      child: CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage('assets/images/user.png'),
+                      ),
                     ),
                     SizedBox(width: 10),
 
@@ -153,7 +158,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   children: [
                     IconButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Get.to(()=> NotificationScreen());
+                        },
                         icon: Image.asset(
                             "assets/icons/notification.png",
                           height: 40,
