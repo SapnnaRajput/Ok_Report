@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../plan_screen/plan_screen.dart';
 import '../utils/constants/colors.dart';
 import 'graphChart_Custom.dart';
 
@@ -47,7 +48,7 @@ class ReportScreen extends StatelessWidget {
               height: 350,
               child: Card(
                   color: Colors.white,
-                  // child: graphChart_Custom()
+                   child: graphChart_Custom()
               ),
             ),
             const SizedBox(height: 8),
@@ -86,32 +87,37 @@ class ReportScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            Card(
-              elevation: 1,
-              color: const Color(0xFFFFFFFF),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'AI Insights',
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 16),
-                    Container(
-                      decoration: BoxDecoration(color: const Color(0xFF2103C6).withOpacity(0.1), borderRadius: BorderRadius.circular(10)),
-                      child: const Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Text(
-                          'Based on your patterns, You’re likely to exceed your limit if consumption continuous at this rate. Consider slowing',
-                          style: TextStyle(
-                            color: Color(0xFF2103C6),
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const PlanScreen()));
+              },
+              child: Card(
+                elevation: 1,
+                color: const Color(0xFFFFFFFF),
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'AI Insights',
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 16),
+                      Container(
+                        decoration: BoxDecoration(color: const Color(0xFF2103C6).withOpacity(0.1), borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Text(
+                            'Based on your patterns, You’re likely to exceed your limit if consumption continuous at this rate. Consider slowing',
+                            style: TextStyle(
+                              color: Color(0xFF2103C6),
+                            ),
                           ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
