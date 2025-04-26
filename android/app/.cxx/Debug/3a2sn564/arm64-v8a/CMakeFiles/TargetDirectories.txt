@@ -1,0 +1,2 @@
+C:/Users/Malay Shyamal/StudioProjects/others/ok_reports/Ok_Report/android/app/.cxx/Debug/3a2sn564/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Malay Shyamal/StudioProjects/others/ok_reports/Ok_Report/android/app/.cxx/Debug/3a2sn564/arm64-v8a/CMakeFiles/rebuild_cache.dir
