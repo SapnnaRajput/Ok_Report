@@ -7,7 +7,7 @@ import '../../utils/constants/colors.dart';
 import '../widget/switch_widget.dart';
 import 'customized_event_mode_setting/customized_event_mode_setting.dart';
 
-class EventAndAiPreferences extends StatelessWidget{
+class EventAndAiPreferences extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class EventAndAiPreferences extends StatelessWidget{
             SwitchWidget(title: "AI Smart Alert", isTrue: true),
             Divider(thickness: 0.5),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 showCalendarBottomSheet(context);
               },
               child: Padding(
@@ -39,10 +39,9 @@ class EventAndAiPreferences extends StatelessWidget{
                 child: Text(
                   "Customize Event mode Settings",
                   style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: ORColors.textPrimary
-                  ),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: ORColors.textPrimary),
                 ),
               ),
             ),
@@ -54,8 +53,7 @@ class EventAndAiPreferences extends StatelessWidget{
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: ORColors.textPrimary
-                ),
+                    color: ORColors.textPrimary),
               ),
             ),
             Divider(thickness: 0.5),
@@ -64,7 +62,6 @@ class EventAndAiPreferences extends StatelessWidget{
       ),
     );
   }
-
 
   void showCalendarBottomSheet(BuildContext context) {
     DateTime selectedDay = DateTime.now();
@@ -177,7 +174,7 @@ class EventAndAiPreferences extends StatelessWidget{
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.pop(context);
-                            Get.to(()=> CustomizedEventModeSetting());
+                            Get.to(() => CustomizedEventModeSetting());
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: ORColors.primaryColor,
@@ -201,7 +198,4 @@ class EventAndAiPreferences extends StatelessWidget{
       },
     );
   }
-
-
 }
-
