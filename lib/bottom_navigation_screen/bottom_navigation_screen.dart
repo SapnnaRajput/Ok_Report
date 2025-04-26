@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:o_r/store_screen/subscription_plan_screen.dart';
 import 'package:o_r/utils/constants/colors.dart';
-
 import '../home_screen/home_screen.dart';
 import '../location_screen/location_screen.dart';
-import '../report_scree/report_screen.dart';
-import '../store_screen/store_screen.dart';
+import '../report_screen/report_screen.dart';
 import '../wearer_screen/wearer_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
@@ -28,7 +26,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     HomeScreen(),
     LocationScreen(),
     ReportScreen(),
-    StoreScreen(),
+    SubscriptionPlanScreen(),
     WearerScreen(),
   ];
 

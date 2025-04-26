@@ -25,7 +25,7 @@ class ORColors{
   // Text Color
   static const Color textPrimary = Color(0xFF252525);
   static const Color textSecondary = Color(0xFF6D6D6D);
-  static const Color textWhite = Color(0xFFffffff);
+  static const Color textSubtitle = Color(0xFF3D3D3D);
 
 // Text input field color
   static const Color textInputFieldColor = Color(0xFFf6f6f6);
