@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:o_r/settings_screen/event_&_ai_preferences/group_monitoring_alerts/group_monitoring_alert_screen.dart';
 
 import '../../../utils/constants/colors.dart';
 
@@ -110,7 +112,9 @@ class CustomizedEventModeSetting extends StatelessWidget{
                       color: ORColors.textPrimary
                   ),
                 ),
-                IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward_ios, size: 20,)
+                IconButton(onPressed: (){
+                  Get.to(()=> GroupMonitoringAlertScreen());
+                }, icon: Icon(Icons.arrow_forward_ios, size: 20,)
                 )
               ],
             ),
