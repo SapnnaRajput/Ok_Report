@@ -7,6 +7,7 @@ import 'package:o_r/auth/login_screen/login_with_email_tab.dart';
 import 'package:o_r/auth/login_screen/login_with_phone_tab.dart';
 import 'package:o_r/utils/constants/colors.dart';
 
+import '../../utils/common_widgets/or_text_widget.dart';
 import '../../utils/constants/text_strings.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -69,21 +70,17 @@ class _LoginScreenState extends State<LoginScreen>
               children: [
                 const SizedBox(height: 5),
                 ListTile(
-                  title: const Text(
-                    "Login Account",
-                    style: TextStyle(
-                      color: ORColors.buttonPrimary,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  title: ORTextWidget(
+                    text: "Login Account",
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: ORColors.primaryColor,
                   ),
-                  subtitle: const Text(
-                    "Hello, Welcome back to account!",
-                    style: TextStyle(
-                      color: ORColors.textSecondary,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
+                  subtitle: ORTextWidget(
+                    text: "Hello, Welcome back to account!",
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textSecondary,
                   ),
                   trailing: _phoneNumber == null
                       ? const CircularProgressIndicator()

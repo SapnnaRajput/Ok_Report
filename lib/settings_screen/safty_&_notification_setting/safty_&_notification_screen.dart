@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
 import '../../utils/constants/colors.dart';
 import '../widget/switch_widget.dart';
@@ -8,16 +9,7 @@ class SafetyAndNotificationScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Safty & Notification Setting",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Safty & Notification Setting"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(

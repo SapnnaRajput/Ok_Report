@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
 import '../utils/constants/colors.dart';
 
@@ -55,15 +57,7 @@ class EditProfileScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Profile",
-          style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: ORColors.primaryColor),
-        ),
-      ),
+      appBar: ORAppBar(title: "Profile"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -107,21 +101,24 @@ class EditProfileScreen extends StatelessWidget{
             const BuildEditTile(title: "Subscription", subtitle: "Premium Plan"),
             const Divider(thickness: 0.5),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: ORColors.primaryColor,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16)),
-                padding:
-                const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              ),
-              child: const Text(
-                "Logout",
-                style: TextStyle(
-                  color: ORColors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700,
+            SizedBox(
+              height: 48,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: ORColors.primaryColor,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16)),
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+                child: Text(
+                  "Logout",
+                  style: GoogleFonts.openSans(
+                    color: ORColors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
             ),
@@ -153,7 +150,7 @@ class BuildEditTile extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
+            style: GoogleFonts.openSans(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: ORColors.textPrimary),
@@ -162,7 +159,7 @@ class BuildEditTile extends StatelessWidget {
             children: [
               Text(
                 subtitle,
-                style: const TextStyle(
+                style: GoogleFonts.openSans(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: ORColors.darkerGrey),

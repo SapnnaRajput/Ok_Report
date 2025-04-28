@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:o_r/scanning_screen/scanning_screen.dart';
 
+import '../utils/common_widgets/or_text_widget.dart';
 import '../utils/constants/colors.dart';
 
 class ConnectToChipScreen extends StatelessWidget {
@@ -13,8 +15,8 @@ class ConnectToChipScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Connect a chip",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
+          style: GoogleFonts.openSans(
+            color: ORColors.primaryColor,
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -28,13 +30,12 @@ class ConnectToChipScreen extends StatelessWidget {
           children: [
             Text(
               "\"Please connect your chip via Bluetooth to enable real-time alcohol tracking and safety alerts. Ensure Bluetooth is turned on and pair your device in the app settings\"",
-              style: TextStyle(
+              style: GoogleFonts.openSans(
                 color: ORColors.darkerGrey,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
               ),
             ),
-
             Image.asset(
               "assets/images/girl_avatar.png",
               width: Get.width*0.49,

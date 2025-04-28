@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
+import '../utils/common_widgets/or_text_widget.dart';
 import '../utils/constants/colors.dart';
 
 class HelpAndSupportScreen extends StatelessWidget {
@@ -21,16 +23,7 @@ class SupportScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Help & Support",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Help & Support"),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -44,24 +37,27 @@ class SupportScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("AI",style: TextStyle(
-                      color: ORColors.primaryColor,
+                    ORTextWidget(
+                      text: "AI",
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                    ),),
-                    Text("Hi Michael Jones, Welcome to Okreport chat support",style: TextStyle(
-                      color: ORColors.darkerGrey,
+                      color: ORColors.primaryColor,
+                    ),
+                    ORTextWidget(
+                      text: "Hi Michael Jones, Welcome to Okreport chat support",
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                    ),),
+                      color: ORColors.darkerGrey,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text("12:47 PM",style: TextStyle(
-                          color: Color(0xff454545),
+                        ORTextWidget(
+                          text: "12:47 PM",
                           fontSize: 8,
                           fontWeight: FontWeight.w400,
-                        ),),
+                          color: Color(0xff454545),
+                        ),
                       ],
                     ),
 
@@ -99,24 +95,27 @@ class SupportScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("AI",style: TextStyle(
-                            color: ORColors.primaryColor,
+                          ORTextWidget(
+                            text: "AI",
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
-                          ),),
-                          Text("Hi Michael Jones, Welcome to Okreport chat support",style: TextStyle(
-                            color: ORColors.darkerGrey,
+                            color: ORColors.primaryColor,
+                          ),
+                          ORTextWidget(
+                            text: "Hi Michael Jones, Welcome to Okreport chat support",
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                          ),),
+                            color: ORColors.darkerGrey,
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Text("12:47 PM",style: TextStyle(
-                                color: Color(0xff454545),
+                              ORTextWidget(
+                                text: "12:47 PM",
                                 fontSize: 8,
                                 fontWeight: FontWeight.w400,
-                              ),),
+                                color: Color(0xff454545),
+                              ),
                             ],
                           ),
                         ],
@@ -126,11 +125,12 @@ class SupportScreen extends StatelessWidget {
 
                   Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Text('"Are you facing issues with GPS tracking?"',style: TextStyle(
-                      color: Color(0xff2103C6),
+                    child: ORTextWidget(
+                      text: '"Are you facing issues with GPS tracking?"',
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                    ),),
+                      color: ORColors.primaryColor,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -138,11 +138,12 @@ class SupportScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Text('"Do you need help upgrading to a premium plan?"',style: TextStyle(
-                      color: Color(0xff2103C6),
+                    child: ORTextWidget(
+                      text: '"Do you need help upgrading to a premium plan?"',
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                    ),),
+                      color: ORColors.primaryColor,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -150,11 +151,12 @@ class SupportScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Text('"Are you seeing incorrect location data?"',style: TextStyle(
-                      color: Color(0xff2103C6),
+                    child: ORTextWidget(
+                      text: '"Are you seeing incorrect location data?"',
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                    ),),
+                      color: ORColors.primaryColor,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -162,17 +164,16 @@ class SupportScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Text('"Are you Facing Payment Related Issues?"',style: TextStyle(
-                      color: Color(0xff2103C6),
+                    child: ORTextWidget(
+                      text: '"Are you Facing Payment Related Issues?"',
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                    ),),
+                      color: ORColors.primaryColor,
+                    ),
                   ),
-
                 ],
               ),
             )
-
           ],
         ),
       ),

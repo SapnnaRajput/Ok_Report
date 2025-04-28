@@ -7,6 +7,7 @@ import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:o_r/auth/signup/signup_screen/signup_screen.dart';
 import 'package:o_r/connect_to_chip_screen/connect_to_chip_screen.dart';
 
+import '../../utils/common_widgets/or_text_widget.dart';
 import '../../utils/constants/colors.dart';
 
 class LoginWithPhoneTab extends StatefulWidget {
@@ -31,19 +32,17 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Phone",
-            style: TextStyle(
-              color: ORColors.textPrimary,
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-            ),
+          ORTextWidget(
+            text: "Phone",
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: ORColors.textPrimary,
           ),
           SizedBox(height: 8),
           TextFormField(
             decoration: InputDecoration(
               hintText: "Enter Your Number",
-              hintStyle: TextStyle(
+              hintStyle: GoogleFonts.openSans(
                   color: ORColors.textSecondary,
                   fontWeight: FontWeight.w400,
                   fontSize: 12),
@@ -129,13 +128,11 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
             ),
           ),
           SizedBox(height: 15),
-          Text(
-            "Password",
-            style: TextStyle(
-              color: ORColors.textPrimary,
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-            ),
+          ORTextWidget(
+            text: "Password",
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: ORColors.textPrimary,
           ),
           SizedBox(height: 8),
           TextFormField(
@@ -152,7 +149,7 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
                 color: ORColors.textSecondary,
               ),
               hintText: "Enter Password",
-              hintStyle: TextStyle(
+              hintStyle: GoogleFonts.openSans(
                   color: ORColors.textSecondary,
                   fontWeight: FontWeight.w400,
                   fontSize: 12),
@@ -200,24 +197,20 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
                     ),
                   ),
                   // const SizedBox(width: 4),
-                  Text(
-                    "Remember me",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: ORColors.textPrimary,
-                    ),
+                  ORTextWidget(
+                    text: "Remember me",
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textPrimary,
                   ),
                 ],
               ),
-              Text(
-                "Forgot Password?",
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                  color: ORColors.textPrimary,
-                ),
-              )
+              ORTextWidget(
+                text: "Forgot Password?",
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: ORColors.textPrimary,
+              ),
             ],
           ),
           SizedBox(
@@ -235,13 +228,11 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                    color: ORColors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                  ),
+                child: ORTextWidget(
+                  text: "Login",
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: ORColors.white,
                 ),
               )),
           SizedBox(height: 30),
@@ -255,13 +246,11 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Text(
-                  "Sign in with Google or Facebook",
-                  style: TextStyle(
-                    color: ORColors.textSecondary,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                  ),
+                child: ORTextWidget(
+                  text: "Sign in with Google or Facebook",
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: ORColors.textSecondary,
                 ),
               ),
               Expanded(
@@ -286,14 +275,13 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
                       height: 30,
                     ),
                     SizedBox(width: 5),
-                    Text(
-                      "Google",
-                      style: TextStyle(
+
+                    ORTextWidget(
+                        text: "Google",
                         color: ORColors.textPrimary,
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                       ),
-                    ),
                   ],
                 )),
               ),
@@ -307,13 +295,11 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
                       height: 30,
                     ),
                     SizedBox(width: 5),
-                    Text(
-                      "Facebook",
-                      style: TextStyle(
+                    ORTextWidget(
+                      text: "Facebook",
                         color: ORColors.textPrimary,
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
-                      ),
                     ),
                   ],
                 )),
@@ -329,14 +315,14 @@ class _LoginWithPhoneTabState extends State<LoginWithPhoneTab> {
               Text.rich(
                 TextSpan(
                   text: "Don’t have an account? ",
-                  style: TextStyle(
+                  style: GoogleFonts.openSans(
                       color: ORColors.textSecondary,
                       fontSize: 12,
                       fontWeight: FontWeight.w400),
                   children: [
                     TextSpan(
                         text: "Sign up",
-                        style: TextStyle(
+                        style: GoogleFonts.openSans(
                             color: Color(0xff2103C6),
                             fontWeight: FontWeight.w600,
                             fontSize: 12),

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:o_r/notification_screen/notification_screen.dart';
 import 'package:o_r/profile_screen/profile_screen.dart';
 import 'package:o_r/utils/constants/colors.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 import '../bottom_navigation_screen/bottom_navigation_screen.dart';
+import '../utils/common_widgets/or_text_widget.dart';
 
 class HomeScreen extends StatefulWidget{
 
@@ -28,7 +30,7 @@ void showWearerDialog(BuildContext context) {
               children: [
                 Text(
                   'Select/Switch the Wearer',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: ORColors.textPrimary),
+                  style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w600, color: ORColors.textPrimary),
                 ),
                 IconButton(
                   icon: Icon(Icons.close),
@@ -86,11 +88,11 @@ Widget wearerTile({
       Text(
         name,
         overflow: TextOverflow.ellipsis,
-        style: TextStyle(color: selected ? Colors.blue : Colors.black, fontWeight: FontWeight.w600),
+        style: GoogleFonts.openSans(color: selected ? Colors.blue : Colors.black, fontWeight: FontWeight.w600),
       ),
       Text(
         role,
-        style: TextStyle(color: selected ? Colors.blueAccent : Colors.black54, fontSize: 12),
+        style: GoogleFonts.openSans(color: selected ? Colors.blueAccent : Colors.black54, fontSize: 12),
       ),
     ],
   );
@@ -128,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           TextSpan(
                             text: "Hey, ",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(
                               color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
@@ -136,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           TextSpan(
                             text: "Michael Jones ",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(
                               color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.w700,
@@ -235,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Text(
                                 '$bacValue BAC',
-                                style: TextStyle(
+                                style: GoogleFonts.openSans(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                   color: Color(0xff1FA41F),
@@ -243,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               Text(
                                 'Safe',
-                                style: TextStyle(
+                                style: GoogleFonts.openSans(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
                                   color: Color(0xff1FA41F),
@@ -269,7 +271,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: const [
                       CircleAvatar(radius: 6, backgroundColor: Colors.grey),
                       SizedBox(width: 5),
-                      Text("Alcohol Limit"),
+                      ORTextWidget(
+                        text: "Alcohol Limit",
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: ORColors.textPrimary,
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
@@ -277,7 +284,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: const [
                       CircleAvatar(radius: 6, backgroundColor: Colors.green),
                       SizedBox(width: 5),
-                      Text("Alcohol Consumed"),
+                      ORTextWidget(
+                        text: "Alcohol Consumed",
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: ORColors.textPrimary,
+                      ),
                     ],
                   ),
                 ],
@@ -290,22 +302,37 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Jhon Doe",  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff252525))),
-                      Text("Active Wearer", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xff888888))),
+                      ORTextWidget(
+                        text: "John Doe",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                          color: Color(0xff252525)
+                      ),
+                      ORTextWidget(
+                          text: "Active Wearer",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff888888)
+                      ),
                     ],
                   ),
                   Row(
                     children: [
                       CircleAvatar(radius: 6, backgroundColor: Colors.green),
                       SizedBox(width: 5),
-                      Text("Connected"),
+                      ORTextWidget(
+                          text: "Connected",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff1E9D1E)
+                      ),
                     ],
                   ),
 
                 ],
               ),
 
-              SizedBox(height: 15,),
+              SizedBox(height: 30,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -348,13 +375,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Recent Activity",
-                        style: TextStyle(
-                          color: ORColors.textPrimary,
+                      ORTextWidget(
+                          text: "Recent Activity",
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
-                        ),
+                          color: ORColors.textPrimary
                       ),
                       SizedBox(height: 25,),
                       Row(
@@ -369,7 +394,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Text(
                               "$bacValue BAC",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
                               color: Color(0xff4f4f4f)
@@ -427,9 +452,9 @@ class _HomeScreenState extends State<HomeScreen> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: TextStyle(color: titleColor, fontSize: 16, fontWeight: FontWeight.w400)),
+            Text(title, style: GoogleFonts.openSans(color: titleColor, fontSize: 16, fontWeight: FontWeight.w400)),
             Text(subtitle,
-                style: TextStyle(color: ORColors.textSecondary, fontSize: 14)),
+                style: GoogleFonts.openSans(color: ORColors.textSecondary, fontSize: 14)),
           ],
         ),
       ],

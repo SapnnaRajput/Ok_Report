@@ -1,23 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
+import '../utils/common_widgets/or_text_widget.dart';
 import '../utils/constants/colors.dart';
 
 class SubscriptionPlanScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Subscription Plans",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Subscription Plans"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: SingleChildScrollView(
@@ -27,44 +21,35 @@ class SubscriptionPlanScreen extends StatelessWidget {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Current plan",
-                    style: TextStyle(
-                      color: ORColors.textSubtitle,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
+                  ORTextWidget(
+                    text: 'Current plan',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textSubtitle,
                   ),
-                  Text(
-                    "Per Month",
-                    style: TextStyle(
-                      color: ORColors.textSubtitle,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
+                  ORTextWidget(
+                    text: 'Per Month',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textSubtitle,
                   ),
-
                 ],
               ),
               const SizedBox(height: 10),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Premium plan",
-                    style: TextStyle(
-                      color: ORColors.textSubtitle,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  ORTextWidget(
+                    text: 'Premium plan',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textSubtitle,
                   ),
-                  Text(
-                    "\$7.99/month",
-                    style: TextStyle(
-                      color: ORColors.textSubtitle,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
+                  ORTextWidget(
+                    text: '\$7.99/month',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textSubtitle,
                   ),
                 ],
               ),
@@ -100,23 +85,19 @@ class SubscriptionPlanScreen extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Basic Plan",
-                                  style: TextStyle(
-                                    color: ORColors.textPrimary,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                                ORTextWidget(
+                                  text: 'Basic Plan',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  color: ORColors.textPrimary,
                                 ),
                                 const SizedBox(height: 8),
-                                Text(
-                                  "Perfect for individual users",
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff454545),
-                                  ),
-                                )
+                                ORTextWidget(
+                                  text: 'Perfect for individual users',
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff454545),
+                                ),
                               ],
                             ),
                           ),
@@ -125,7 +106,7 @@ class SubscriptionPlanScreen extends StatelessWidget {
                             children: [
                               Text(
                                 "\$2",
-                                style: TextStyle(
+                                style: GoogleFonts.openSans(
                                   color: ORColors.textPrimary,
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700,
@@ -133,7 +114,7 @@ class SubscriptionPlanScreen extends StatelessWidget {
                               ),
                               Text(
                                 "/month",
-                                style: TextStyle(
+                                style: GoogleFonts.openSans(
                                     color: Color(0xff454545),
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400
@@ -161,11 +142,11 @@ class SubscriptionPlanScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: const Text(
+                          child: Text(
                             "Select Basic",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                            style: GoogleFonts.openSans(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
                           ),
@@ -208,34 +189,28 @@ class SubscriptionPlanScreen extends StatelessWidget {
                               children: [
                                 Row(
                                   children: [
-                                    Text(
-                                      "Family Plan",
-                                      style: TextStyle(
-                                        color: ORColors.textPrimary,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                    ORTextWidget(
+                                      text: 'Family plan',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      color: ORColors.textPrimary,
                                     ),
                                     const SizedBox(width: 6),
-                                    Text(
-                                      "(Popular)",
-                                      style: TextStyle(
-                                        color: ORColors.primaryColor,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                    ORTextWidget(
+                                      text: '(Popular)',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      color: ORColors.primaryColor,
                                     ),
                                   ],
                                 ),
                                 const SizedBox(height: 8),
-                                Text(
-                                  "Unlimited Protection for families",
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff454545),
-                                  ),
-                                )
+                                ORTextWidget(
+                                  text: 'Unlimited Protection for families',
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff454545),
+                                ),
                               ],
                             ),
                           ),
@@ -244,7 +219,7 @@ class SubscriptionPlanScreen extends StatelessWidget {
                             children: [
                               Text(
                                 "\$12.50",
-                                style: TextStyle(
+                                style: GoogleFonts.openSans(
                                   color: ORColors.textPrimary,
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700,
@@ -252,7 +227,7 @@ class SubscriptionPlanScreen extends StatelessWidget {
                               ),
                               Text(
                                 "/month",
-                                style: TextStyle(
+                                style: GoogleFonts.openSans(
                                     color: Color(0xff454545),
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400
@@ -281,11 +256,11 @@ class SubscriptionPlanScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          child: const Text(
+                          child: Text(
                             "Select Family",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                            style: GoogleFonts.openSans(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
                           ),
@@ -296,13 +271,11 @@ class SubscriptionPlanScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Text(
-                "Add On's",
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: ORColors.textPrimary,
-                ),
+              ORTextWidget(
+                text: "Add On's",
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: ORColors.textPrimary,
               ),
 
               SizedBox(height: 5),
@@ -334,7 +307,7 @@ class SubscriptionPlanScreen extends StatelessWidget {
                       children: [
                         Text(
                           "\$12.50/month",
-                          style: TextStyle(
+                          style: GoogleFonts.openSans(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
@@ -343,19 +316,18 @@ class SubscriptionPlanScreen extends StatelessWidget {
                         SizedBox(height: 4),
                         Text(
                           "\$13.50/month",
-                          style: TextStyle(
+                          style: GoogleFonts.openSans(
                             fontSize: 14,
                             color: Colors.grey,
                             decoration: TextDecoration.lineThrough,
                           ),
                         ),
                         SizedBox(height: 4),
-                        Text(
-                          "Amount to pay",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey,
-                          ),
+                        ORTextWidget(
+                          text: 'Amount to pay',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: ORColors.darkerGrey,
                         ),
                       ],
                     ),
@@ -373,9 +345,9 @@ class SubscriptionPlanScreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Row(
                           children: [
-                            const Text(
+                            Text(
                               "Upgrade",
-                              style: TextStyle(
+                              style: GoogleFonts.openSans(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white,
@@ -407,7 +379,7 @@ class SubscriptionPlanScreen extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             text,
-            style: const TextStyle(
+            style: GoogleFonts.openSans(
               fontSize: 14,
               fontWeight: FontWeight.w400,
               color: Color(0xff454545),
@@ -463,21 +435,22 @@ class _AddOnListState extends State<AddOnList> {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   widget.title,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                  style: GoogleFonts.openSans(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                     color: ORColors.textPrimary,
                   ),
                 ),
                 // const SizedBox(height: 6),
                 Text(
                   widget.oldPrice,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style: GoogleFonts.openSans(
+                    fontSize: 12,
                     fontWeight: FontWeight.w400,
                     decoration: TextDecoration.lineThrough,
                     color: Colors.grey,
@@ -490,27 +463,27 @@ class _AddOnListState extends State<AddOnList> {
                   children: [
                     Text(
                       widget.newPrice,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                      style: GoogleFonts.openSans(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
                         color: ORColors.darkerGrey,
                       ),
                     ),
-                    // const SizedBox(width: 4),
-                    const Text(
+                    const SizedBox(width: 4),
+                    Text(
                       "(33% off)",
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.openSans(
+                        fontSize: 8,
+                        fontWeight: FontWeight.w400,
                         color: ORColors.darkerGrey,
                       ),
                     ),
                   ],
                 ),
                 // const SizedBox(height: 8),
-                const Text(
+                Text(
                   "Per Month",
-                  style: TextStyle(
+                  style: GoogleFonts.openSans(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: ORColors.darkerGrey,

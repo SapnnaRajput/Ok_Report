@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../connect_to_chip_screen/connect_to_chip_screen.dart';
+import '../../utils/common_widgets/or_text_widget.dart';
 import '../../utils/constants/colors.dart';
 import '../signup/signup_screen/signup_screen.dart';
 
@@ -23,13 +25,11 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Email",
-            style: TextStyle(
-              color: ORColors.textPrimary,
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-            ),
+          ORTextWidget(
+            text: "Email",
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: ORColors.textPrimary,
           ),
           SizedBox(height: 8),
           TextFormField(
@@ -59,13 +59,11 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
             ),
           ),
           SizedBox(height: 15),
-          Text(
-            "Password",
-            style: TextStyle(
-              color: ORColors.textPrimary,
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-            ),
+          ORTextWidget(
+            text: "Password",
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: ORColors.textPrimary,
           ),
           SizedBox(height: 8),
           TextFormField(
@@ -129,24 +127,20 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
                     ),
                   ),
                   // const SizedBox(width: 4),
-                  Text(
-                    "Remember me",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: ORColors.textPrimary,
-                    ),
+                  ORTextWidget(
+                    text: "Remember me",
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textPrimary,
                   ),
                 ],
               ),
-              Text(
-                "Forgot Password?",
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                  color: ORColors.textPrimary,
-                ),
-              )
+              ORTextWidget(
+                text: "Forgot Password?",
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: ORColors.textPrimary,
+              ),
             ],
           ),
           SizedBox(
@@ -164,13 +158,12 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                    color: ORColors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                  ),
+                child:
+                ORTextWidget(
+                  text: "Login",
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: ORColors.white,
                 ),
               )),
           SizedBox(height: 30),
@@ -184,13 +177,12 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Text(
-                  "Sign in with Google or Facebook",
-                  style: TextStyle(
-                    color: ORColors.textSecondary,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                  ),
+                child:
+                ORTextWidget(
+                  text: "Sign in with Google or Facebook",
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: ORColors.textSecondary,
                 ),
               ),
               Expanded(
@@ -215,13 +207,11 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
                       height: 30,
                     ),
                     SizedBox(width: 5),
-                    Text(
-                      "Google",
-                      style: TextStyle(
-                        color: ORColors.textPrimary,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    ORTextWidget(
+                      text: "Google",
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: ORColors.textPrimary,
                     ),
                   ],
                 )),
@@ -236,13 +226,11 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
                       height: 30,
                     ),
                     SizedBox(width: 5),
-                    Text(
-                      "Facebook",
-                      style: TextStyle(
-                        color: ORColors.textPrimary,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    ORTextWidget(
+                      text: "Facebook",
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: ORColors.textPrimary,
                     ),
                   ],
                 )),
@@ -258,14 +246,14 @@ class _LoginWithEmailTabState extends State<LoginWithEmailTab> {
               Text.rich(
                 TextSpan(
                   text: "Don’t have an account? ",
-                  style: TextStyle(
+                  style: GoogleFonts.openSans(
                       color: ORColors.textSecondary,
                       fontSize: 12,
                       fontWeight: FontWeight.w400),
                   children: [
                     TextSpan(
                       text: "Sign up",
-                      style: TextStyle(
+                      style: GoogleFonts.openSans(
                           color: Color(0xff2103C6),
                           fontWeight: FontWeight.w600,
                           fontSize: 12),

@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:o_r/settings_screen/event_&_ai_preferences/customized_event_mode_setting/group_monitoring_alerts/group_monitoring_alert_screen.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
+import '../../../utils/common_widgets/or_text_widget.dart';
 import '../../../utils/constants/colors.dart';
 
 class CustomizedEventModeSetting extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Customized Event Mode Setting",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Customized Event Mode Setting"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         child: Column(
@@ -24,7 +20,12 @@ class CustomizedEventModeSetting extends StatelessWidget{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Set Event Duration"),
+                ORTextWidget(
+                    text: "Set Event Duration",
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: ORColors.textPrimary
+                ),
                 SizedBox(
                   height: 32,
                   // width: 104,
@@ -42,10 +43,10 @@ class CustomizedEventModeSetting extends StatelessWidget{
                         SizedBox(width: 6), // spacing between icon and text
                         Text(
                           "Hours",
-                          style: TextStyle(
+                          style: GoogleFonts.openSans(
                             color: ORColors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
@@ -55,7 +56,12 @@ class CustomizedEventModeSetting extends StatelessWidget{
               ],
             ),
             SizedBox(height: 15),
-            Text("(Event Mode turns off automatically after set time)", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),),
+            ORTextWidget(
+                text: "(Event Mode turns off automatically after set time)",
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: Color(0xff5D5D5D),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Divider(thickness: 0.5, color: ORColors.textSecondary),
@@ -63,7 +69,12 @@ class CustomizedEventModeSetting extends StatelessWidget{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Set Safe Drinking Limit"),
+                ORTextWidget(
+                    text: "Set Safe Drinking Limit",
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: ORColors.textPrimary
+                ),
                 SizedBox(
                   height: 32,
                   // width: 104,
@@ -81,10 +92,10 @@ class CustomizedEventModeSetting extends StatelessWidget{
                         SizedBox(width: 6), // spacing between icon and text
                         Text(
                           "BAC",
-                          style: TextStyle(
+                          style: GoogleFonts.openSans(
                             color: ORColors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
@@ -94,7 +105,12 @@ class CustomizedEventModeSetting extends StatelessWidget{
               ],
             ),
             SizedBox(height: 15),
-            Text("(Event Mode turns off automatically after set time)", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),),
+            ORTextWidget(
+              text: "(Event Mode turns off automatically after set time)",
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              color: Color(0xff5D5D5D),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Divider(thickness: 0.5, color: ORColors.textSecondary),
@@ -102,15 +118,15 @@ class CustomizedEventModeSetting extends StatelessWidget{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Group Monitoring & Alerts",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: ORColors.textPrimary
-                  ),
+                ORTextWidget(
+                  text: "Group Monitoring & Alerts",
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: ORColors.textPrimary,
                 ),
-                IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward_ios, size: 20,)
+                IconButton(onPressed: (){
+                  Get.to(()=> GroupMonitoringAlertScreen());
+                }, icon: Icon(Icons.arrow_forward_ios, size: 20,)
                 )
               ],
             ),

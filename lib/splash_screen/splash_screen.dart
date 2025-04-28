@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:o_r/auth/login_screen/login_screen.dart';
 
 import '../utils/constants/colors.dart';
 import '../utils/constants/image_strings.dart';
 import '../utils/constants/text_strings.dart';
+import '../utils/common_widgets/or_text_widget.dart';
 
 class SplashScreen extends StatelessWidget{
   const SplashScreen({super.key});
@@ -18,51 +20,52 @@ class SplashScreen extends StatelessWidget{
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(ORText.onBoardingTitle1, style: TextStyle(
-                      color: ORColors.primaryColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600)),
-                  const Text(ORText.onBoardingSubTitle1, style: TextStyle(
-                      color: ORColors.textSecondary,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400)),
-
+                  ORTextWidget(
+                    text: ORText.onBoardingTitle1,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: ORColors.primaryColor,
+                  ),
+                  ORTextWidget(
+                    text: ORText.onBoardingSubTitle1,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: ORColors.textSecondary,
+                  ),
                   const SizedBox(height: 10,),
-
                   SizedBox(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
+                    width: Get.width,
                     child: Image.asset(
                       ORImage.onBoardingImage1, fit: BoxFit.cover,),
                   ),
 
-                  SizedBox(height: 10,),
+                  SizedBox(height: 20,),
 
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(ORText.onBoardingText1, style: TextStyle(
-                        color: ORColors.textPrimary,
+                      ORTextWidget(
+                        text: ORText.onBoardingText1,
                         fontSize: 16,
-                        fontWeight: FontWeight.w600,)),
+                        fontWeight: FontWeight.w600,
+                        color: ORColors.textPrimary,
+                      ),
                     ],
                   ),
 
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 25,),
 
                   SizedBox(
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                          Get.to(() => const LoginScreen());
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: ORColors.primaryColor,
@@ -74,13 +77,11 @@ class SplashScreen extends StatelessWidget{
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              ORText.getStarted,
-                              style: TextStyle(
-                                color: ORColors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                              ),
+                            ORTextWidget(
+                              text: ORText.getStarted,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
                             ),
                             SizedBox(width: 8),
                             Icon(Icons.arrow_forward, color: ORColors.white),

@@ -82,7 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 title: const Text(
                   "Account Regiatration",
                   style: TextStyle(
-                    color: ORColors.buttonPrimary,
+                    color: ORColors.primaryColor,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),

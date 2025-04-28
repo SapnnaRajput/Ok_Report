@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
+import '../../utils/common_widgets/or_text_widget.dart';
 import '../../utils/constants/colors.dart';
 import '../widget/switch_widget.dart';
 
@@ -8,16 +10,7 @@ class DeviceAndBluetoothSetting extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Device & Bluetooth Setting",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Device & Bluetooth Setting"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
@@ -27,13 +20,11 @@ class DeviceAndBluetoothSetting extends StatelessWidget{
             Divider(thickness: 0.5),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15),
-              child: Text(
-                "Pair/Unpair Bluetooth Device",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: ORColors.textPrimary
-                ),
+              child: ORTextWidget(
+                text: "Pair/Unpair Bluetooth Device",
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: ORColors.textPrimary,
               ),
             ),
             Divider(thickness: 0.5),
