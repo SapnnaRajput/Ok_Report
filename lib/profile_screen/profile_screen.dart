@@ -1,28 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:o_r/edit_profile/edit_profile_screen.dart';
 import 'package:o_r/settings_screen/app_preferences/app_preferences.dart';
 import 'package:o_r/settings_screen/event_&_ai_preferences/event_&_preferences_screen.dart';
 import 'package:o_r/settings_screen/location_&_tracking_setting/location_and_tracking_setting.dart';
 import 'package:o_r/settings_screen/safty_&_notification_setting/safty_&_notification_screen.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 import 'package:o_r/utils/constants/colors.dart';
 
 import '../settings_screen/device_&_bluetooth_setting/device_and_bluetooth_setting.dart';
+import '../utils/common_widgets/or_text_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Profile",
-          style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: ORColors.primaryColor),
-        ),
-      ),
+      appBar: ORAppBar(title: "Profile"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
@@ -37,19 +32,17 @@ class ProfileScreen extends StatelessWidget {
                 radius: 20,
                 backgroundImage: AssetImage('assets/icons/user.png'),
               ),
-              title: Text(
-                "Micheal Jones",
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: ORColors.textPrimary),
+              title: ORTextWidget(
+                  text: "Micheal Jones",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ORColors.primaryColor
               ),
-              subtitle: Text(
-                "@michealjones",
-                style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: ORColors.textSecondary),
+              subtitle: ORTextWidget(
+                  text: "@michealjones",
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xff252525)
               ),
               trailing: IconButton(
                   onPressed: () {
@@ -99,7 +92,7 @@ class ProfileContentWidget extends StatelessWidget {
         leading: Icon(leadingIcon),
         title: Text(
           title,
-          style: TextStyle(
+          style: GoogleFonts.openSans(
               fontSize: 14,
               fontWeight: FontWeight.w400,
               color: ORColors.darkerGrey),

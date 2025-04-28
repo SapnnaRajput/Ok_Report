@@ -48,7 +48,7 @@ class ReportScreen extends StatelessWidget {
               height: 350,
               child: Card(
                   color: Colors.white,
-                   child: graphChart_Custom()
+                   // child: graphChart_Custom()
               ),
             ),
             const SizedBox(height: 8),

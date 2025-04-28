@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/constants/colors.dart';
 
@@ -24,7 +25,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
         children: [
           Text(
             widget.title,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: ORColors.textPrimary),
+            style: GoogleFonts.openSans(fontSize: 16, fontWeight: FontWeight.w600, color: ORColors.textPrimary),
           ),
           Switch(
             value: widget.isTrue,

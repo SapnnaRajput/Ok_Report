@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
 import '../utils/constants/colors.dart';
 
@@ -19,16 +21,7 @@ class NotificationScreen extends StatelessWidget {
 
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Notifications",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Notification"),
       body: ListView.builder(
         itemCount: messages.length,
         itemBuilder: (context, index) {
@@ -58,11 +51,11 @@ class NotificationScreen extends StatelessWidget {
                   leading: Image.asset('assets/icons/user.png'),
                   title: Text(
                     title,
-                    style: const TextStyle(fontSize: 10, color: Colors.black87),
+                    style: GoogleFonts.openSans(fontSize: 10, color: Colors.black87),
                   ),
                   trailing: Text(
                     date,
-                    style: const TextStyle(fontSize: 10, color: Colors.black87),
+                    style: GoogleFonts.openSans(fontSize: 10, color: Colors.black87),
                   ),
                 ),
               ),

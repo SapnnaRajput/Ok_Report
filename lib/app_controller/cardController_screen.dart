@@ -4,7 +4,7 @@ class CardController extends GetxController {
 
   final saveCard = false.obs;
 
-  void toggleSaveCard() {
+  void saveCardDetails() {
     saveCard.value = !saveCard.value;
     update();
   }

@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import '../../utils/common_widgets/or_text_widget.dart';
 import '../../utils/constants/colors.dart';
 import '../widget/switch_widget.dart';
 import 'customized_event_mode_setting/customized_event_mode_setting.dart';
@@ -11,16 +13,7 @@ class EventAndAiPreferences extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Event & Ai Preferences",
-          style: TextStyle(
-            color: ORColors.buttonPrimary,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      appBar: ORAppBar(title: "Event & Ai Preferences"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
@@ -36,24 +29,22 @@ class EventAndAiPreferences extends StatelessWidget {
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Text(
-                  "Customize Event mode Settings",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: ORColors.textPrimary),
+                child: ORTextWidget(
+                    text: "Customize Event mode Settings",
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: ORColors.textPrimary
                 ),
               ),
             ),
             Divider(thickness: 0.5),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15),
-              child: Text(
-                "Set Hydration Remainders",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: ORColors.textPrimary),
+              child: ORTextWidget(
+                  text: "Set Hydration Remainders",
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: ORColors.textPrimary
               ),
             ),
             Divider(thickness: 0.5),

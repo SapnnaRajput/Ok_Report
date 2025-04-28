@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:o_r/bottom_navigation_screen/bottom_navigation_screen.dart';
+import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
+import '../utils/common_widgets/or_text_widget.dart';
 import '../utils/constants/colors.dart';
 
 class ScanningScreen extends StatefulWidget {
@@ -45,7 +48,10 @@ class _ScanningScreenState extends State<ScanningScreen>
               children: [
                 Image.asset("assets/icons/done.png", height: 26, width: 26,),
                 SizedBox(width: 5),
-                Text("Device Connected"),
+                ORTextWidget(
+                  text: "Device Connected",
+                  color: ORColors.textPrimary,
+                ),
               ],
             )
           ],
@@ -64,16 +70,7 @@ class _ScanningScreenState extends State<ScanningScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "Scanning...",
-            style: TextStyle(
-              color: ORColors.buttonPrimary,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
+        appBar: ORAppBar(title: "Scanning..."),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
@@ -88,23 +85,21 @@ class _ScanningScreenState extends State<ScanningScreen>
                     width: 80,
                   ),
                 ),
-                title: Text(
-                  "Scanning...",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                  ),
+                title: ORTextWidget(
+                  text: "Scanning...",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ORColors.textPrimary,
                 ),
               ),
               SizedBox(
                   height: 8
               ),
-              Text(
-                "Select a device to Connect",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
+              ORTextWidget(
+                text: "Select a device to Connect",
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ORColors.textPrimary,
               ),
               Expanded(
                   child: ListView.builder(
@@ -114,7 +109,7 @@ class _ScanningScreenState extends State<ScanningScreen>
                         leading: Image.asset("assets/icons/memory.png", height: 24, width: 24,),
                         title: Text(
                           "ID :123456",
-                          style: TextStyle(
+                          style: GoogleFonts.openSans(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                           ),
@@ -125,7 +120,7 @@ class _ScanningScreenState extends State<ScanningScreen>
                             },
                             child: Text(
                               "Connect",
-                              style: TextStyle(
+                              style: GoogleFonts.openSans(
                                 fontSize: 14,
                                 color: ORColors.primaryColor,
                                 fontWeight: FontWeight.w700,

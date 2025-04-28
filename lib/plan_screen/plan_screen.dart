@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../card_screen/card_screen.dart';
+import '../location_screen/emergency_screen.dart';
 import 'ai_screen.dart';
 
 class PlanScreen extends StatefulWidget {
@@ -145,6 +148,7 @@ class _PlanScreenState extends State<PlanScreen> {
                 border: Border.all(color: const Color(0xFF888888).withOpacity(0.2)),
               ),
               child: ListTile(
+                onTap: () => Get.to(()=>AddCardScreen()),
                 contentPadding: const EdgeInsets.only(left: 10.0,right: 15.0,top: 0,bottom: 0),
                 leading: Image.asset('assets/images/caredit_debit_card.png',height: 40),
                 title: Text('Credit/ Debit Card',style: GoogleFonts.openSans(fontSize: 14,color: const Color(0xFF252525),fontWeight: FontWeight.bold),),
@@ -160,9 +164,7 @@ class _PlanScreenState extends State<PlanScreen> {
                 border: Border.all(color: const Color(0xFF888888).withOpacity(0.2)),
               ),
               child: ListTile(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) =>  AddCardScreen()));
-                },
+                onTap: () => Get.to(()=> EmergencyScreen()),
                 contentPadding: const EdgeInsets.only(left: 15.0,right: 15.0,top: 0,bottom: 0),
                 leading: Image.asset('assets/images/worldbank.png',height: 50),
                 title: Text('Net Banking',style: GoogleFonts.openSans(fontSize: 14,color: const Color(0xFF252525),fontWeight: FontWeight.bold),),
@@ -172,9 +174,7 @@ class _PlanScreenState extends State<PlanScreen> {
             const SizedBox(height: 50,),
 
             InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const AiScreen()));
-              },
+              onTap: () => Get.to(()=>AiScreen()),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -16,154 +16,170 @@ class AddCardScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      const TextSpan(
-                        text: '*',
-                        style: TextStyle(color: Colors.red),
-                      ),
-                      TextSpan(
-                        text: 'Car Number',
-                        style: GoogleFonts.openSans(color: Colors.black54),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 15),
-                const TextField( // Removed Expanded here
-                  decoration: InputDecoration(
-                    labelText: 'Enter Card Number',
-                    labelStyle: TextStyle(color: Colors.grey,fontSize: 14),
-                    border: UnderlineInputBorder(),
-                    enabledBorder: UnderlineInputBorder(),
-                    focusedBorder: UnderlineInputBorder(),
-                  ),
-                ),
-                const SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Add a Card',
+              style: GoogleFonts.openSans(
+                fontSize: 14,
+              ),
+            ),
+            SizedBox(height: 10,),
+            Card(
+              borderOnForeground: true,
+              surfaceTintColor: Colors.black54,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Expanded( // Wrap first Column in Expanded
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                    RichText(
+                      text: TextSpan(
                         children: [
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                const TextSpan(
-                                  text: '*',
-                                  style: TextStyle(color: Colors.red),
-                                ),
-                                TextSpan(
-                                  text: 'Valid Thru',
-                                  style: GoogleFonts.openSans(color: Colors.black54),
-                                ),
-                              ],
-                            ),
+                          const TextSpan(
+                            text: '*',
+                            style: TextStyle(color: Colors.red),
                           ),
-                          const TextField(
-                            decoration: InputDecoration(
-                              labelText: 'MM/YY',
-                              labelStyle: TextStyle(color: Colors.grey,fontSize: 14),
-                              border: UnderlineInputBorder(),
-                              enabledBorder: UnderlineInputBorder(),
-                              focusedBorder: UnderlineInputBorder(),
-                            ),
+                          TextSpan(
+                            text: 'Car Number',
+                            style: GoogleFonts.openSans(color: Colors.black54,fontSize: 12),
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(width: 16), // Added spacing
-                    Expanded( // Wrap second Column in Expanded
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                const TextSpan(
-                                  text: '*',
-                                  style: TextStyle(color: Colors.red),
+                    const SizedBox(height: 10),
+                    const TextField( // Removed Expanded here
+                      decoration: InputDecoration(
+                        labelText: 'Enter Card Number',
+                        labelStyle: TextStyle(color: Colors.grey,fontSize: 12),
+                        border: UnderlineInputBorder(),
+                        enabledBorder: UnderlineInputBorder(),
+                        focusedBorder: UnderlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: 15),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded( // Wrap first Column in Expanded
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    const TextSpan(
+                                      text: '*',
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                    TextSpan(
+                                      text: 'Valid Thru',
+                                      style: GoogleFonts.openSans(color: Colors.black54,fontSize: 12),
+                                    ),
+                                  ],
                                 ),
-                                TextSpan(
-                                  text: 'CVV',
-                                  style: GoogleFonts.openSans(color: Colors.black54),
+                              ),
+                              const TextField(
+                                decoration: InputDecoration(
+                                  labelText: 'MM/YY',
+                                  labelStyle: TextStyle(color: Colors.grey,fontSize: 12),
+                                  border: UnderlineInputBorder(),
+                                  enabledBorder: UnderlineInputBorder(),
+                                  focusedBorder: UnderlineInputBorder(),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          const TextField(
-                            decoration: InputDecoration(
-                              labelText: 'Security Code',
-                              labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                              border: UnderlineInputBorder(),
-                              enabledBorder: UnderlineInputBorder(),
-                              focusedBorder: UnderlineInputBorder(),
+                        ),
+                        const SizedBox(width: 16), // Added spacing
+                        Expanded( // Wrap second Column in Expanded
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    const TextSpan(
+                                      text: '*',
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                    TextSpan(
+                                      text: 'CVV',
+                                      style: GoogleFonts.openSans(color: Colors.black54,fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const TextField(
+                                decoration: InputDecoration(
+                                  labelText: 'Security Code',
+                                  labelStyle: TextStyle(color: Colors.grey, fontSize: 12),
+                                  border: UnderlineInputBorder(),
+                                  enabledBorder: UnderlineInputBorder(),
+                                  focusedBorder: UnderlineInputBorder(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    // Add this widget just above the ElevatedButton
+                    Obx(() => IconButton(
+                      onPressed: controller.saveCardDetails,
+                      icon: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          controller.saveCard.value
+                              ?  Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Image.asset('assets/images/selectedCheckbox.png',height: 20,),
+                              )
+                              : const Icon(Icons.check_box_outline_blank,
+                              color: ORColors.primaryColor,
+                              size: 25),
+                          const SizedBox(width: 10),
+                          Text(
+                            'Save card info for future use',
+                            style: GoogleFonts.openSans(
+                              fontSize: 12,
                             ),
                           ),
                         ],
                       ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 10),
-                // Add this widget just above the ElevatedButton
-                Obx(() => IconButton(
-                  onPressed: controller.toggleSaveCard,
-                  icon: Row(
-                    children: [
-                      controller.saveCard.value
-                          ? const Icon(Icons.check_circle,
-                          color: ORColors.primaryColor,
-                          size: 25)
-                          : const Icon(Icons.check_box_outline_blank,
-                          color: ORColors.primaryColor,
-                          size: 25),
-                      const SizedBox(width: 10),
-                      Text(
-                        'Save card info for future use',
-                        style: GoogleFonts.openSans(
-                          color: Colors.grey,
-                          fontSize: 12,
+                    )),
+
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      height: 50,
+                      width: double.infinity, // Use full width
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: ORColors.primaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        ),
+                        child: const Text("Pay \$12.50", style: TextStyle(
+                            color: ORColors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       ),
-                    ],
-                  ),
-                )),
-
-                const SizedBox(height: 10),
-                SizedBox(
-                  height: 50,
-                  width: double.infinity, // Use full width
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: ORColors.primaryColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     ),
-                    child: const Text("Add Card", style: TextStyle(
-                        color: ORColors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
