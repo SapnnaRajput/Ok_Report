@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../card_screen/card_screen.dart';
 import 'ai_screen.dart';
 
 class PlanScreen extends StatefulWidget {
@@ -159,6 +160,9 @@ class _PlanScreenState extends State<PlanScreen> {
                 border: Border.all(color: const Color(0xFF888888).withOpacity(0.2)),
               ),
               child: ListTile(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>  AddCardScreen()));
+                },
                 contentPadding: const EdgeInsets.only(left: 15.0,right: 15.0,top: 0,bottom: 0),
                 leading: Image.asset('assets/images/worldbank.png',height: 50),
                 title: Text('Net Banking',style: GoogleFonts.openSans(fontSize: 14,color: const Color(0xFF252525),fontWeight: FontWeight.bold),),
