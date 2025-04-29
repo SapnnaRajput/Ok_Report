@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:o_r/utils/common_widgets/app_bar_widget.dart';
 
+import '../family_plan_home_screen/family_home_screen.dart';
+import '../location_screen/emergency_screen.dart';
 import '../utils/constants/colors.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -48,6 +52,7 @@ class NotificationScreen extends StatelessWidget {
               ),
               child: Center(
                 child: ListTile(
+                  onTap: () => Get.to(()=> FamilyHomeScreen()),
                   leading: Image.asset('assets/icons/user.png'),
                   title: Text(
                     title,
