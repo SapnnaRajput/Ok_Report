@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:o_r/family_plan_home_screen/family_home_screen.dart';
 import 'package:o_r/splash_screen/splash_screen.dart';
 import 'package:o_r/utils/constants/colors.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: ORColors.primaryColor),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: FamilyHomeScreen(),
     );
   }
 }
