@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'emergency_screenTwo.dart';
 
 class EmergencyScreen extends StatelessWidget {
   const EmergencyScreen({super.key});
@@ -72,7 +76,7 @@ class EmergencyScreen extends StatelessWidget {
                 width: 120,
                 child: Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(()=> EmergencyScreenTwo()),
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
